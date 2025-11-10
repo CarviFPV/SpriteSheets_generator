@@ -1,0 +1,39 @@
+# Docker Compose for Production
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: spritesheet-backend-prod
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend-uploads:/app/uploads
+      - backend-outputs:/app/outputs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
+    networks:
+      - spritesheet-network
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: spritesheet-frontend-prod
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - spritesheet-network
+
+volumes:
+  backend-uploads:
+  backend-outputs:
+
+networks:
+  spritesheet-network:
+    driver: bridge

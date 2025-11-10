@@ -1,0 +1,39 @@
+services:
+  backend:
+    build: ./backend
+    container_name: spritesheet-backend
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./backend:/app
+      - backend-uploads:/app/uploads
+      - backend-outputs:/app/outputs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - spritesheet-network
+
+  frontend:
+    build: ./frontend
+    container_name: spritesheet-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=/api
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - spritesheet-network
+
+volumes:
+  backend-uploads:
+  backend-outputs:
+
+networks:
+  spritesheet-network:
+    driver: bridge
