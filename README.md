@@ -1,8 +1,8 @@
-# 🎮 Spritesheet Generator
+# Spritesheet Generator
 
 A modern web application for combining PNG frames into spritesheets for Unity 6.2 and other game engines.
 
-## 🚀 Features
+## Features
 
 - **Multi-frame Upload**: Upload multiple PNG files at once
 - **Configurable Grid**: Set custom columns and padding
@@ -11,7 +11,7 @@ A modern web application for combining PNG frames into spritesheets for Unity 6.
 - **Instant Download**: Download generated spritesheets immediately
 - **Unity-Ready**: Optimized for Unity 6.2 sprite animation
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 ### Backend
 - **Python 3.14** - Latest Python runtime
@@ -29,12 +29,12 @@ A modern web application for combining PNG frames into spritesheets for Unity 6.
 - **Docker Compose** - Multi-container orchestration
 - **Nginx** - Production web server (optional)
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Docker Desktop** or **Docker Engine** + **Docker Compose**
 - **Git** (for cloning the repository)
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -61,7 +61,7 @@ Open your browser and navigate to:
 - **Frontend**: http://localhost:3000
 - **Backend API Docs**: http://localhost:8000/docs
 
-## 🎯 Usage
+## Usage
 
 ### Web Interface
 
@@ -113,7 +113,7 @@ GET /download/{filename}
 GET /health
 ```
 
-## 🐳 Docker Commands
+## Docker Commands
 
 ### Development Mode
 ```powershell
@@ -142,7 +142,7 @@ docker-compose -f docker-compose.prod.yml up --build -d
 docker-compose -f docker-compose.prod.yml down
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 SpriteSheets_generator/
@@ -170,7 +170,7 @@ SpriteSheets_generator/
 └── LICENSE
 ```
 
-## 🎨 Unity 6.2 Integration
+## Unity 6.2 Integration
 
 ### Importing the Spritesheet
 
@@ -194,7 +194,7 @@ SpriteSheets_generator/
 3. Unity will prompt to create an animation - choose location
 4. Your sprite animation is ready!
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -230,7 +230,7 @@ const [cols, setCols] = useState(8)      // Default columns
 const [padding, setPadding] = useState(2) // Default padding
 ```
 
-## 🔧 Development
+## Development
 
 ### Backend Development
 
@@ -258,14 +258,14 @@ npm run build
 
 **Backend:** Already production-ready with FastAPI + Uvicorn
 
-## 📝 API Documentation
+## API Documentation
 
 FastAPI provides automatic interactive API documentation:
 
 - **Swagger UI**: http://localhost:8000/docs
 - **ReDoc**: http://localhost:8000/redoc
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Port Already in Use
 
@@ -309,7 +309,7 @@ Ensure:
 3. Files are not corrupted
 4. Sufficient disk space available
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
@@ -317,23 +317,23 @@ Ensure:
 4. Push to branch: `git push origin feature-name`
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **CarviFPV**
 - GitHub: [@CarviFPV](https://github.com/CarviFPV)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - FastAPI for the excellent web framework
 - React team for React 19
 - Vite team for blazing-fast builds
 - Pillow for image processing capabilities
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [React 19 Documentation](https://react.dev/)
@@ -341,7 +341,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Docker Documentation](https://docs.docker.com/)
 - [Unity Sprite Documentation](https://docs.unity3d.com/Manual/Sprites.html)
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Support for other image formats (JPG, WEBP)
 - [ ] Batch processing multiple spritesheets
@@ -354,4 +354,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ for game developers using **Python 3.14**, **React 19**, **Vite 7**, and **Docker**
+Made for game developers using **Python 3.14**, **React 19**, **Vite 7**, and **Docker**
